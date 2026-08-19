@@ -1,0 +1,33 @@
+{
+  "description": "PSI-SEAL/1 test vectors. Generated 2026-08-20 from the actual output of hello_psi.py and hello-psi.js after a byte-identical parity run - never hand-typed. sealed_at pinned to 2026-08-20T00:00:00.000Z (rule R6).",
+  "schema": "PSI-SEAL/1.0.0",
+  "schema_digest": "454743698e1b23d5eddb7fc4a97ae1c8c33047921ef360d8e6c86d61f2fe9e77",
+  "sealed_at": "2026-08-20T00:00:00.000Z",
+  "parity": "TypeScript-independent seeds (Python + JavaScript) produced identical bytes for all vectors.",
+  "vectors": [
+    {
+      "name": "vector-0",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "merkle_leaf": "316f357f59644423979697f64550e5ecb9a25baf1af6bb04f7a5956fc6e71bbf",
+      "seal_hash": "4b8903750e114030f3361fd2de4df0dbae5420c9acc76c96b8dd8cdf321112a1",
+      "envelope_jcs": "{\"hash\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"merkle\":{\"leaf\":\"316f357f59644423979697f64550e5ecb9a25baf1af6bb04f7a5956fc6e71bbf\",\"root\":\"316f357f59644423979697f64550e5ecb9a25baf1af6bb04f7a5956fc6e71bbf\"},\"schema\":\"PSI-SEAL/1.0.0\",\"schema_digest\":\"454743698e1b23d5eddb7fc4a97ae1c8c33047921ef360d8e6c86d61f2fe9e77\",\"sealed_at\":\"2026-08-20T00:00:00.000Z\",\"subject\":{\"name\":\"vector-0\",\"size_bytes\":0}}",
+      "input": ""
+    },
+    {
+      "name": "vector-1",
+      "hash": "9b9ca310d75dd7663f788163ba148f4c819f89b5ca12df76a421be5daaf2acf7",
+      "merkle_leaf": "afdb58d3a5dabc3fb37d10ceeb040b5a4279296ac750e69e1814c4adf3377ae3",
+      "seal_hash": "4684eb6cfb2a6f30c42d6164cb56a353b591cb4dc9451b78e5d89b183c71272b",
+      "envelope_jcs": "{\"hash\":\"9b9ca310d75dd7663f788163ba148f4c819f89b5ca12df76a421be5daaf2acf7\",\"merkle\":{\"leaf\":\"afdb58d3a5dabc3fb37d10ceeb040b5a4279296ac750e69e1814c4adf3377ae3\",\"root\":\"afdb58d3a5dabc3fb37d10ceeb040b5a4279296ac750e69e1814c4adf3377ae3\"},\"schema\":\"PSI-SEAL/1.0.0\",\"schema_digest\":\"454743698e1b23d5eddb7fc4a97ae1c8c33047921ef360d8e6c86d61f2fe9e77\",\"sealed_at\":\"2026-08-20T00:00:00.000Z\",\"subject\":{\"name\":\"vector-1\",\"size_bytes\":11}}",
+      "input": "Hello, PSI."
+    },
+    {
+      "name": "vector-2",
+      "hash": "2468d16e6ad888291923ae502c622218806a511b21d81e92bdcb3cc1c53fbdf5",
+      "merkle_leaf": "3fed12715625fcd9f744d2990f2dd5567d6bb82a74c7a83aa0312265a88815c8",
+      "seal_hash": "3fa7462d38b9cd8c9485544ce1738b6e6d1923198ca95afb8ba9efdd0c477a9a",
+      "envelope_jcs": "{\"hash\":\"2468d16e6ad888291923ae502c622218806a511b21d81e92bdcb3cc1c53fbdf5\",\"merkle\":{\"leaf\":\"3fed12715625fcd9f744d2990f2dd5567d6bb82a74c7a83aa0312265a88815c8\",\"root\":\"3fed12715625fcd9f744d2990f2dd5567d6bb82a74c7a83aa0312265a88815c8\"},\"schema\":\"PSI-SEAL/1.0.0\",\"schema_digest\":\"454743698e1b23d5eddb7fc4a97ae1c8c33047921ef360d8e6c86d61f2fe9e77\",\"sealed_at\":\"2026-08-20T00:00:00.000Z\",\"subject\":{\"name\":\"vector-2\",\"size_bytes\":52}}",
+      "input": "{\"model\":\"example\",\"output\":\"The seal is the math.\"}"
+    }
+  ]
+}
