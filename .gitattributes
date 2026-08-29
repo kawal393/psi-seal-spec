@@ -1,0 +1,6 @@
+# Sealed bytes must be stored EXACTLY as written.
+# GENESIS_ZERO.md is bound by SHA-256 in receipt APEX-NTR-C29D90C714C99F96;
+# any newline normalisation breaks the recomputation chain.
+genesis-zero/GENESIS_ZERO.md -text
+genesis-zero/GENESIS_ZERO_MANIFEST.json -text
+genesis-zero/BYTES_PROOF.md -text
