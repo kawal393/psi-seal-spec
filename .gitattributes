@@ -4,3 +4,6 @@
 genesis-zero/GENESIS_ZERO.md -text
 genesis-zero/GENESIS_ZERO_MANIFEST.json -text
 genesis-zero/BYTES_PROOF.md -text
+
+case-001/ROW1_UBER_ACKNOWLEDGMENT_2026-08-17.md -text
+case-001/ROW1_MANIFEST.json -text

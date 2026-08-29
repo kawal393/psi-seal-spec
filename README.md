@@ -30,6 +30,33 @@ The sealing ceremony is reproducible: `genesis-zero/seal_genesis_zero.py`
 (canonical bytes → SHA-256 → live public notarize → public verify round-trip).
 If the math breaks, the correction is public. Money buys process, never outcome.
 
+## CASE 001 — THE FIRST SEALED WORKER RECORD (live)
+
+The reference applied to a worker: every row is one fact + one document hash +
+one timestamp + one public seal. Facts only — no verdict is rendered.
+
+ROW 1 — sealed 29 August 2026:
+
+- Fact: on 17 Aug 2026, 00:46 AEST, Uber Support (agent 'Mahak',
+  Uber Pacific Pty Ltd, Sydney) acknowledged in writing receipt of the worker's
+  notice and APP 12 access request.
+- Artifact: `case-001/ROW1_UBER_ACKNOWLEDGMENT_2026-08-17.md`
+- Artifact SHA-256: `f57d4b3e7e558480f828dc5b20ba8878418ad049ee4134d35f97893c9352d10b`
+- Receipt: `APEX-NTR-20E2092FA5304F81` (VERIFIED / APPROVED, PQ-signed)
+- Sealed decision hash: `ee74bacdbef9e4dce922f9cba0d253e4084564ba6efe59fd7ee20b223917a2ef`
+- Merkle leaf: `c445a235185cea8879b323dad8988b6efb35e3960da129543947704260b77533`
+
+Verify: recompute the artifact digest, then match against the live receipt:
+
+```
+certutil -hashfile case-001\ROW1_UBER_ACKNOWLEDGMENT_2026-08-17.md SHA256
+```
+
+- https://apex-infrastructure.com/verify/ee74bacdbef9e4dce922f9cba0d253e4084564ba6efe59fd7ee20b223917a2ef
+- https://ai-governance-standard.com/verify?hash=ee74bacdbef9e4dce922f9cba0d253e4084564ba6efe59fd7ee20b223917a2ef
+
+The record grows every time evidence lands. The ledger does not judge. It remembers.
+
 ## Prove it in 60 seconds
 
 A seal is deterministic math. Two implementations, two languages, zero shared
@@ -63,6 +90,8 @@ Both must print `pin_current : yes`.
   actual identical output of both seeds - never hand-typed
 - `genesis-zero/` - Genesis Zero declaration, sealed receipt manifest, and the
   reproducible sealing script (29 Aug 2026)
+- `case-001/` - The First Sealed Worker Record: row artifacts, sealed receipt
+  manifests, and reproducible row-sealing scripts
 
 ## Verify the Verifier
 
