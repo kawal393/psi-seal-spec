@@ -4,6 +4,32 @@
 
 Apex PSI — Universal Verification Layer. Proposed open standard under active development. Verification free forever (MIT). IETF drafts are individual submissions, not formally endorsed. Verify everything yourself.
 
+## GENESIS ZERO — sealed 29 August 2026
+
+The reference implementation declaration, sealed live against the public APEX PSI ledger:
+
+- Document: `genesis-zero/GENESIS_ZERO.md`
+- Document SHA-256: `f91ba473ee1e88b349d3a4dee18a27d9d8adbc3e1ef1e32aadcd94960a7b7b9b`
+- Receipt: `APEX-NTR-C29D90C714C99F96` (VERIFIED / APPROVED, PQ-signed LMS-W4-SHA256)
+- Sealed decision hash: `d60e050719f8be3223c5e51e1cc80a990fad552a4b1692fb2c042097e626e04e`
+- Merkle leaf: `b9895d1bd7ce676c46d251a72544f5b6463e501a6fd173626b2199c0a2fe0480`
+
+Verify it yourself:
+
+```
+certutil -hashfile genesis-zero\GENESIS_ZERO.md SHA256   # Windows
+sha256sum genesis-zero/GENESIS_ZERO.md                   # Linux/macOS
+```
+
+Match the printed digest against the live public receipt:
+
+- https://apex-infrastructure.com/verify/d60e050719f8be3223c5e51e1cc80a990fad552a4b1692fb2c042097e626e04e
+- https://ai-governance-standard.com/verify?hash=d60e050719f8be3223c5e51e1cc80a990fad552a4b1692fb2c042097e626e04e
+
+The sealing ceremony is reproducible: `genesis-zero/seal_genesis_zero.py`
+(canonical bytes → SHA-256 → live public notarize → public verify round-trip).
+If the math breaks, the correction is public. Money buys process, never outcome.
+
 ## Prove it in 60 seconds
 
 A seal is deterministic math. Two implementations, two languages, zero shared
@@ -35,6 +61,8 @@ Both must print `pin_current : yes`.
 - `hello-psi/hello-psi.js` - JavaScript reference seed (Node 18+, zero deps)
 - `hello-psi/vectors.json` - machine-readable test vectors, generated from the
   actual identical output of both seeds - never hand-typed
+- `genesis-zero/` - Genesis Zero declaration, sealed receipt manifest, and the
+  reproducible sealing script (29 Aug 2026)
 
 ## Verify the Verifier
 
