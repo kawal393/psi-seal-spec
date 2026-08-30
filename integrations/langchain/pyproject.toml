@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langchain-apex-psi"
+version = "0.1.0"
+description = "Neutral provenance receipts for LangChain runs - APEX PSI seals with multi-standard adapters (opt-in)."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = ["langchain-core>=0.3"]
+keywords = ["provenance", "sha256", "receipts", "eu-ai-act", "article-50", "c2pa", "opentimestamps"]
+
+[project.urls]
+Repository = "https://github.com/kawal393/psi-seal-spec"
+
+[tool.setuptools]
+packages = ["langchain_apex_psi"]
